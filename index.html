@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盖可设计圈 - 让创意落地，让设计发声</title>
+    <meta name="description" content="面向个人品牌的多元化创意设计与技术服务平台，提供 3D 建模、应用开发、原画设计、学习交友、教育咨询等服务">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B8C6E',
+                        'primary-light': '#5dd9a1',
+                        dark: '#0A0A0F',
+                        'dark-lighter': '#1A1A2E',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #0A0A0F; color: white; }
+        .gradient-text { background: linear-gradient(135deg, #3B8C6E, #5dd9a1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #3B8C6E; transition: width 0.3s; }
+        .nav-link:hover::after { width: 100%; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="text-xl font-bold gradient-text">G 盖可设计圈</a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white transition">首页</a>
+                    <a href="#services" class="nav-link text-gray-300 hover:text-white transition">服务</a>
+                    <a href="#portfolio" class="nav-link text-gray-300 hover:text-white transition">作品</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white transition">关于</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white transition">联系</a>
+                </nav>
+                <a href="#contact" class="bg-primary hover:bg-primary-light text-white px-6 py-2 rounded-full font-medium transition">立即咨询</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-purple-500/20"></div>
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0); background-size: 40px 40px;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                让创意落地<br>
+                <span class="gradient-text">让设计发声</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-4">3D 建模 | 应用开发 | 原画设计 | 学习成长 | 创意社交</p>
+            <p class="text-lg text-gray-500 mb-10 max-w-2xl mx-auto">从概念到落地，全方位支持你的创意项目。我们不只是工作室，更是你的创意成长伙伴。</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#services" class="bg-primary hover:bg-primary-light text-white px-8 py-4 rounded-full font-semibold text-lg transition">探索服务 →</a>
+                <a href="#contact" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition">加入社群</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-dark-lighter">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">我们能帮你做什么？</h2>
+                <p class="text-xl text-gray-400">五大核心业务板块，全方位支持你的创意梦想</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 3D Modeling -->
+                <div class="card-hover bg-dark p-8 rounded-2xl border border-white/10">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-3xl mb-6">🏙️</div>
+                    <h3 class="text-2xl font-bold mb-3">3D 建模</h3>
+                    <p class="text-gray-400">角色建模、场景建模、产品可视化，用三维艺术呈现无限可能</p>
+                </div>
+                <!-- App Development -->
+                <div class="card-hover bg-dark p-8 rounded-2xl border border-white/10">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center text-3xl mb-6">💻</div>
+                    <h3 class="text-2xl font-bold mb-3">应用开发</h3>
+                    <p class="text-gray-400">移动应用、Web 应用、交互原型，技术驱动创意实现</p>
+                </div>
+                <!-- Original Design -->
+                <div class="card-hover bg-dark p-8 rounded-2xl border border-white/10">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center text-3xl mb-6">🎨</div>
+                    <h3 class="text-2xl font-bold mb-3">原画设计</h3>
+                    <p class="text-gray-400">角色原画、场景原画、概念设计，用画笔勾勒想象世界</p>
+                </div>
+                <!-- Learning -->
+                <div class="card-hover bg-dark p-8 rounded-2xl border border-white/10">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-3xl mb-6">📚</div>
+                    <h3 class="text-2xl font-bold mb-3">学习交友</h3>
+                    <p class="text-gray-400">设计课程、作品指导、社群交流，与志同道合者共同成长</p>
+                </div>
+                <!-- Education -->
+                <div class="card-hover bg-dark p-8 rounded-2xl border border-white/10">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center text-3xl mb-6">🎓</div>
+                    <h3 class="text-2xl font-bold mb-3">教育咨询</h3>
+                    <p class="text-gray-400">职业规划、作品集指导、留学咨询，为你的设计之路指明方向</p>
+                </div>
+                <!-- Community -->
+                <div class="card-hover bg-dark p-8 rounded-2xl border border-white/10">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center text-3xl mb-6">🌟</div>
+                    <h3 class="text-2xl font-bold mb-3">创意社区</h3>
+                    <p class="text-gray-400">加入设计师社群，分享作品、交流经验、拓展人脉</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">看看我们玩过的创意</h2>
+                <p class="text-xl text-gray-400">每一个作品都是创意与技术的完美融合</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-dark-lighter rounded-2xl overflow-hidden border border-white/10">
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center">
+                        <span class="text-6xl">🎮</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-primary text-sm font-medium">3D 建模</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">赛博朋克角色设计</h3>
+                        <p class="text-gray-400 text-sm">为游戏项目设计的未来风格角色模型</p>
+                    </div>
+                </div>
+                <div class="card-hover bg-dark-lighter rounded-2xl overflow-hidden border border-white/10">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center">
+                        <span class="text-6xl">📱</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-primary text-sm font-medium">应用开发</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">智能健康管理 App</h3>
+                        <p class="text-gray-400 text-sm">跨平台移动应用，连接智能设备</p>
+                    </div>
+                </div>
+                <div class="card-hover bg-dark-lighter rounded-2xl overflow-hidden border border-white/10">
+                    <div class="h-48 bg-gradient-to-br from-amber-600 to-orange-600 flex items-center justify-center">
+                        <span class="text-6xl">🏞️</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-primary text-sm font-medium">原画设计</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">奇幻场景概念图</h3>
+                        <p class="text-gray-400 text-sm">游戏场景概念设计与氛围渲染</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-dark-lighter">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="text-center lg:text-left">
+                    <div class="w-48 h-48 mx-auto lg:mx-0 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-8xl shadow-2xl shadow-primary/30">
+                        G
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">不只是工作室<br>更是创意伙伴</h2>
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">设计师 / 开发者 / 创作者</h3>
+                    <p class="text-gray-400 text-lg mb-4 leading-relaxed">
+                        你好！我是盖可，一个热爱创意与技术的多面手。专注于平面设计、3D建模和应用开发，致力于将每一个想法转化为令人惊叹的作品。
+                    </p>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        我相信设计不仅仅是视觉，更是解决问题的思维方式。无论是品牌视觉系统、3D概念设计，还是跨平台应用开发，我都追求极致的用户体验和美学表达。
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="px-4 py-2 bg-dark rounded-full text-primary border border-primary/30">Photoshop</span>
+                        <span class="px-4 py-2 bg-dark rounded-full text-primary border border-primary/30">Illustrator</span>
+                        <span class="px-4 py-2 bg-dark rounded-full text-primary border border-primary/30">Figma</span>
+                        <span class="px-4 py-2 bg-dark rounded-full text-primary border border-primary/30">Blender</span>
+                        <span class="px-4 py-2 bg-dark rounded-full text-primary border border-primary/30">React</span>
+                        <span class="px-4 py-2 bg-dark rounded-full text-primary border border-primary/30">Vue.js</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold gradient-text">50+</div>
+                            <div class="text-gray-400 mt-1">完成项目</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold gradient-text">30+</div>
+                            <div class="text-gray-400 mt-1">满意客户</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold gradient-text">5+</div>
+                            <div class="text-gray-400 mt-1">年经验</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">联系我们</h2>
+                <p class="text-xl text-gray-400">有项目想法？让我们一起实现</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">开始合作</h3>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        无论是品牌设计、3D建模还是应用开发，我都期待与你交流。发送消息，让我们一起创造精彩！
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 p-4 bg-dark-lighter rounded-xl border border-white/10">
+                            <span class="text-2xl">📧</span>
+                            <span class="text-gray-300">contact@gekstudio.com</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-dark-lighter rounded-xl border border-white/10">
+                            <span class="text-2xl">💬</span>
+                            <span class="text-gray-300">微信：gek_studio</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-dark-lighter rounded-xl border border-white/10">
+                            <span class="text-2xl">🌐</span>
+                            <span class="text-gray-300">GitHub: gaike12345</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-dark-lighter p-8 rounded-2xl border border-white/10">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">姓名</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-dark border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary transition" placeholder="请输入你的姓名">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">邮箱</label>
+                            <input type="email" required class="w-full px-4 py-3 bg-dark border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary transition" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">需求描述</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 bg-dark border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary transition resize-none" placeholder="请简要描述你的需求..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-primary-light text-white py-4 rounded-xl font-semibold text-lg transition">
+                            发送消息 →
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-dark-lighter border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold gradient-text mb-4">G 盖可设计圈</h3>
+                    <p class="text-gray-400 text-sm">让创意落地，让设计发声。技能 + 学习 + 社交一体化的设计师成长社区。</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">快速导航</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#services" class="hover:text-primary transition">服务项目</a></li>
+                        <li><a href="#portfolio" class="hover:text-primary transition">作品集</a></li>
+                        <li><a href="#about" class="hover:text-primary transition">关于我们</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">服务项目</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#services" class="hover:text-primary transition">3D 建模</a></li>
+                        <li><a href="#services" class="hover:text-primary transition">应用开发</a></li>
+                        <li><a href="#services" class="hover:text-primary transition">原画设计</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">联系我们</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📧 contact@gekstudio.com</li>
+                        <li>💬 微信：gek_studio</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center text-gray-500">
+                <p>© 2026 盖可设计圈. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感谢你的留言！我会尽快回复你。');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
